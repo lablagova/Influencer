@@ -10,5 +10,13 @@ using namespace std;
 
 
 //Definition der Klasse Influencer
-
+class Influencer
+{
+    public:
+        Influencer (string name, vector<Video> v);
+    
+    private:
+        string name;
+        vector<Video> videos;
+};
 #endif
