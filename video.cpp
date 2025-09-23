@@ -8,14 +8,39 @@ using namespace std;
 //Implementierung der Klasse Video
 
 
+    Video::Video(string title, int length, Platform p)
+        : title(title), length(length), platforms{p}
+        {    
+        if (title.empty() || length <= 5)
+            throw runtime_error("Wrong size or no title");
+        }
+    
+    vector<Platform> Video::upload(const vector<Platform>& v)
+        
+        vector<Platform> ignored
 
-        : string title, int length, Platform platforms;
+        for (size_t i = 0; i < v.size(); ++i)
+        {
+                Platform p = v[i];
+                bool found = false;
+                for (size_t j = 0; j < platforms.size; ++j)
+                    {
+                        if (platforms[j] == p)
+                        found = true;
+                        break;
+                    }
+                if (found)
+                {
+                    ignored.push_back(p);
+                }
+                else:
+                {
+                    platforms.push_back(p);
+                }
+            return: ignored;
+        }
+            
 
-        if (!platform)
-            throw Platform::YouTube;
 
-        if (!title)
-            throw("runtime_error");
 
-        if (lange < 5)
-            throw("runtime_error")
+       

@@ -7,3 +7,4 @@
 using namespace std;
 
 //Implementierung der Klasse Influencer
+ Influencer (string name, vector<Video> v);
